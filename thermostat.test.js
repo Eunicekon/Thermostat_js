@@ -22,23 +22,18 @@ test('You can decrease the temperature with a down function', ()=>{
 });
 
 test('The minimum temperature is 10 degrees', ()=>{
-  expect(thermostat.minimumTemp()).toEqual(10);
+  for (let i = 0; i < 11; i++){
+    thermostat.down();
+  }
+  expect(thermostat.currentTemperature()).toBe(10);
 });
 
-test('The minimum temperature is 10 degrees', ()=>{
-  expect(thermostat.maximumTemp()).toEqual(32);
-});
-
-// test('Is power saving mode on / off', ()=>{
-//   thermostat.maximumTemp();
-//   expect(thermostat.powerSaving()).toBe(false);
+// test('If power saving mode is on,the maximum temperature is 25 degrees ', ()=>{
+//   thermostat.minimumTemp();
+//   expect(thermostat.powerOn()).toBe(25);
 // });
 
-test('If power saving mode is on,the maximum temperature is 25 degrees ', ()=>{
-  thermostat.minimumTemp();
-  expect(thermostat.powerOn()).toBe(25);
-});
-
-// test('If power saving mode is on, the maximum temperature is 25 degrees', () => {
-//   expect(thermostat.maxTemp()).toBe(25);
-// })
+// test('If power saving mode is off,the maximum temperature is 32 degrees ', ()=>{
+//   thermostat.minimumTemp();
+//   expect(thermostat.powerOff()).toBe(32);
+// });

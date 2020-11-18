@@ -1,45 +1,36 @@
 class Thermostat{
   constructor(){
-    this.degrees = 20;
-    this.MIN = 10;
-    // this.powerOn = true;
-    this.MAXTEMP = 32;
-
+    this.DEGREES = 20;
+    this.MIN_DEGREES = 10;
+    // this.MAXTEMP = 32;
   };
 
   currentTemperature(){
-    return this.degrees 
+    return this.DEGREES 
   };
   
   up() {
-    return this.degrees += 1;
+    return this.DEGREES += 1;
   };
 
   down() {
-    return this.degrees -= 1;
+    if (this.minimumTemp()){
+      return
+    }
+    return this.DEGREES -= 1;
   };
 
   minimumTemp() {
-    return this.MIN;
+    return this.DEGREES === this.MIN_DEGREES;
   }
 
-  maximumTemp(){
-    return this.MAXTEMP;
-  }
+  // powerOn(){
+  //   return this.MIN += 15;
+  // }
 
-  powerOn(){
-    return this.MIN += 15;
-  }
-  // powerSaving(){
-  //   // return this.MAXTEMP;
-
-  //   // return this.powerOn = false;
-  //   if (this.powerOn == true){
-  //     return this.MAXTEMP -= 7;
-  //   }else if (this.powerOn == false){
-  //     return this.MAXTEMP;
-  //   }
-  // };
+  // powerOff(){
+  //   return this.MIN += 22;
+  // }
 
 };
 module.exports = Thermostat; 
