@@ -22,6 +22,5 @@ test('You can decrease the temperature with an down function', ()=>{
 });
 
 test('The minimum temperature is 10 degrees', ()=>{
-  thermostat.minTemp()
-  expect(thermostat.minTemp()).toBe(10);
+  expect(thermostat.minimumTemp()).toEqual(10);
 });

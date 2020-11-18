@@ -1,6 +1,6 @@
 class Thermostat{
   constructor(){
-    this.degrees = 20
+    this.degrees = 20;
     this.MIN = 10;
   };
 
@@ -9,14 +9,16 @@ class Thermostat{
   };
   
   up() {
-    this.degrees += 1;
+    return this.degrees += 1;
   };
 
   down() {
-    this.degrees -= 1;
+    return this.degrees -= 1;
   };
 
-
+  minimumTemp() {
+    return this.MIN;
+  }
 
 };
 module.exports = Thermostat; 
