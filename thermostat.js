@@ -2,6 +2,9 @@ class Thermostat{
   constructor(){
     this.degrees = 20;
     this.MIN = 10;
+    this.powerOn = true;
+    this.MAXTEMP = 32;
+
   };
 
   currentTemperature(){
@@ -18,6 +21,10 @@ class Thermostat{
 
   minimumTemp() {
     return this.MIN;
+  }
+
+  maximumTemp(){
+    return this.MAXTEMP;
   }
 
 };
