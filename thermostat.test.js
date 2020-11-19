@@ -28,11 +28,18 @@ test('The minimum temperature is 10 degrees', ()=>{
   expect(thermostat.currentTemperature()).toBe(10);
 });
 
-test('If power saving mode is on', ()=>{
+test('Is power saving mode is on', ()=>{
   expect(thermostat.isPowerSaveOn()).toBe(true);
 });
 
-test('If power saving mode is off,the maximum temperature is 32 degrees ', ()=>{
-  thermostat.isPowerSaveOff();
+test('Is power saving mode is off', ()=>{
+  thermostat.turnPowerSaveOff();
   expect(thermostat.isPowerSaveOn()).toBe(false);
+});
+
+test('turn power saving back on', () =>{
+  thermostat.turnPowerSaveOff();
+  expect(thermostat.isPowerSaveOn()).toBe(false);
+  thermostat.turnPowerSavingOn();
+  expect(thermostat.isPowerSaveOn()).toBe(true);
 });

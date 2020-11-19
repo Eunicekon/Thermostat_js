@@ -28,8 +28,12 @@ class Thermostat{
     return this.isPowerSave === true;
   }
 
-  isPowerSaveOff(){
+  turnPowerSaveOff(){
     return this.isPowerSave = false;
+  }
+
+  turnPowerSavingOn(){
+    this.isPowerSave = true;
   }
 
 };
