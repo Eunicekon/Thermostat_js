@@ -59,5 +59,13 @@ test('If power saving mode is off, the maximum temperature is 32 degrees', () =>
   for (var i = 0; i < 13; i++){
     thermostat.up()
   }
-  expect(thermostat.currentTemperature()).toBe(32)
+  expect(thermostat.currentTemperature()).toBe(32);
+})
+
+test('You can reset the temperature to 20 with a reset function', () =>{
+  for (var i = 0; i < 6; i++){
+    thermostat.up();
+  }
+  thermostat.resetDegrees();
+  expect(thermostat.currentTemperature()).toBe(20)
 })

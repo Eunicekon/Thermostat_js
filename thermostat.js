@@ -48,5 +48,9 @@ class Thermostat{
     return this.DEGREES === this.MIN_LIMIT_TEMP;
   }
 
+  resetDegrees(){
+    this.DEGREES = 20;
+  }
+
 };
 module.exports = Thermostat; 
