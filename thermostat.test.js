@@ -4,7 +4,7 @@ const Thermostat = require('./thermostat');
 let thermostat;
 
 beforeEach(async () => {
- thermostat = new Thermostat;
+ thermostat = new Thermostat();
 });
 
 test('Thermostat starts at 20 degrees', ()=>{
@@ -28,12 +28,11 @@ test('The minimum temperature is 10 degrees', ()=>{
   expect(thermostat.currentTemperature()).toBe(10);
 });
 
-// test('If power saving mode is on,the maximum temperature is 25 degrees ', ()=>{
-//   thermostat.minimumTemp();
-//   expect(thermostat.powerOn()).toBe(25);
-// });
+test('If power saving mode is on', ()=>{
+  expect(thermostat.isPowerSaveOn()).toBe(true);
+});
 
-// test('If power saving mode is off,the maximum temperature is 32 degrees ', ()=>{
-//   thermostat.minimumTemp();
-//   expect(thermostat.powerOff()).toBe(32);
-// });
+test('If power saving mode is off,the maximum temperature is 32 degrees ', ()=>{
+  thermostat.isPowerSaveOff();
+  expect(thermostat.isPowerSaveOn()).toBe(false);
+});

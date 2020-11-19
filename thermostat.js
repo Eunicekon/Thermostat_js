@@ -2,7 +2,7 @@ class Thermostat{
   constructor(){
     this.DEGREES = 20;
     this.MIN_DEGREES = 10;
-    // this.MAXTEMP = 32;
+    this.isPowerSave = true;
   };
 
   currentTemperature(){
@@ -14,23 +14,23 @@ class Thermostat{
   };
 
   down() {
-    if (this.minimumTemp()){
-      return
+    if (this.isMinimumTemp()){
+      return;
     }
     return this.DEGREES -= 1;
   };
 
-  minimumTemp() {
+  isMinimumTemp() {
     return this.DEGREES === this.MIN_DEGREES;
   }
 
-  // powerOn(){
-  //   return this.MIN += 15;
-  // }
+  isPowerSaveOn(){
+    return this.isPowerSave === true;
+  }
 
-  // powerOff(){
-  //   return this.MIN += 22;
-  // }
+  isPowerSaveOff(){
+    return this.isPowerSave = false;
+  }
 
 };
 module.exports = Thermostat; 
