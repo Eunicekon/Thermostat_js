@@ -7,15 +7,18 @@
 </head>
 <body>
   <section>
-    <h1 id="Degrees"></h1>
-
+    <h1 id="temperature"></h1>
     <div>
-      <button></button>
-      <button></button>
-      <button></button>
-      <button></button>
-      <button></button>
+      <button id="temperature-up">+</button>
+      <button id="temperature-down">-</button>
+      <button id="temperature-reset">reset</button>
+      <p>Power saving mode is <span id="power-saving-status">on:</span>
+      </p>
+      <button id="powersaving-on">PSM on</button>
+      <button id="powersaving-off">PSM off</button>
     </div>
   </section>  
+
+  <script src="thermostat.js"></script>
 </body>
 </html>
