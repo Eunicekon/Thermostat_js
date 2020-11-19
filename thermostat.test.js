@@ -43,3 +43,21 @@ test('turn power saving back on', () =>{
   thermostat.turnPowerSavingOn();
   expect(thermostat.isPowerSaveOn()).toBe(true);
 });
+
+// Turn temp to 25 degrees when Power saving Mode is activated
+// Turn temp to 32 degrees when Power saving Mode is off
+
+test('Turn temp to 25 degrees when Power saving Mode is activated', () =>{
+  for (var i = 0; i < 6; i++){
+    thermostat.up()
+  }
+  expect(thermostat.currentTemperature()).toBe(25)
+})
+
+test('If power saving mode is off, the maximum temperature is 32 degrees', () =>{
+  thermostat.turnPowerSaveOff();
+  for (var i = 0; i < 13; i++){
+    thermostat.up()
+  }
+  expect(thermostat.currentTemperature()).toBe(32)
+})
