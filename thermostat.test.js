@@ -69,3 +69,22 @@ test('You can reset the temperature to 20 with a reset function', () =>{
   thermostat.resetDegrees();
   expect(thermostat.currentTemperature()).toBe(20)
 })
+
+test('display energy levels, anything < 18 is low-usage', () =>{
+  for (var i = 0; i < 3; i++){
+    thermostat.down();
+  }
+  expect(thermostat.energyUsage()).toBe('low-usage');
+});
+
+test('display energy levels, anything <= 25 is medium-usage', () =>{
+  expect(thermostat.energyUsage()).toBe('medium-usage');
+});
+
+test('display energy levels, anything > 25 is high-usage', () =>{
+  thermostat.isPowerSave = false;
+  for (var i = 0; i <6; i++){
+    thermostat.up();
+  }
+  expect(thermostat.energyUsage()).toBe('high-usage');
+});
