@@ -3,6 +3,8 @@ Challenge setup:
 ================
 - Specification:
 
+<img src="image/thermostat.jpeg" height="150" width="150">
+
 1. Thermostat starts at 20 degrees
 2. You can increase the temperature with an up function
 3. You can decrease the temperature with a down function
