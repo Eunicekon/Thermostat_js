@@ -3,15 +3,16 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="index.css">
   <title>Thermostat</title>
 </head>
 <body>
-  <section>
+  <section class = "mainBody">
     <h1 id="temperature"></h1>
     <div>
-      <button id="temperature-up">+</button>
-      <button id="temperature-down">-</button>
-      <button id="temperature-reset">reset</button>
+      <button id="temp-up">+</button>
+      <button id="temp-down">-</button>
+      <button id="temp-reset">reset</button>
       <p>Power saving mode is <span id="power-saving-status">on:</span>
       </p>
       <button id="powersaving-on">PSM on</button>
@@ -20,5 +21,6 @@
   </section>  
 
   <script src="thermostat.js"></script>
+  <script src="interface.js"></script>
 </body>
 </html>
