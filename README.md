@@ -4,6 +4,7 @@ Challenge setup:
 - Specification:
 
 <img src="image/thermostat.jpeg" height="150" width="150">
+
 TEST
 ====
 1. Thermostat starts at 20 degrees
