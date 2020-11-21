@@ -54,3 +54,5 @@ function turnOffPowerSave(){
   itsTooHot;
   document.getElementById("increase").innerHTML = itsTooHot;
 };
+
+
