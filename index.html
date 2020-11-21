@@ -9,12 +9,14 @@
 <body>
   <section class = "mainBody">
     <h1 id="temperature"> Temperature </h1>
-    <img src="image/images.jpeg" alt="thermostat_on wall" height="50" width="50">
+    <img src="image/images.jpeg" alt="thermostat_on wall" height="100" width="100">
     <div>
-      <button id="temp-up">+</button>
+      <button type="button" onclick="myclick()" id="temp-up">+</button> 
+      <button id="increase">0</button><br>
       <button id="temp-down">-</button>
-      <button id="temp-reset">reset</button>
-      <p>Power saving mode is <span id="power-saving-status">on:</span>
+      <button>0</button><br><br>
+      <button id="temp-reset">reset</button><br>
+      <p>Power saving mode is:=><span id="power-saving-status">ON</span>
       </p>
       <button id="powersaving-on">PSM on</button>
       <button id="powersaving-off">PSM off</button>

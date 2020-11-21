@@ -12,10 +12,16 @@ let resetTemp = 0;
 let powerOn = " ";
 let powerOff = " ";
 
+tempUp.addEventListener('click', function(event){
+  tempUp.style.color = "green";
+});
 
+tempDown.addEventListener('click', function(event){
+  tempDown.style.color = "red";
+});
 
-for (let i = defaultTemp; i === tempUp; i++){
-  if(i < 25){
-    console.log("up the limit in here");
-  }
+let increaseTemp = 0;
+function myclick(){
+  increaseTemp += 1;
+  document.getElementById("increase").innerHTML = increaseTemp;
 }
