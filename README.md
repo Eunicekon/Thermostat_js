@@ -3,7 +3,7 @@ Challenge setup:
 ================
 - Specification:
 
-<img src="image/thermostat.jpeg" height="150" width="150">
+<img src="image/thermostat.jpeg" height="150" width="150">  <img src="image/degree.png" height="150" width="150">
 
 TEST
 ====
