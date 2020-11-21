@@ -12,13 +12,12 @@
     <img src="image/images.jpeg" alt="thermostat_on wall" height="100" width="100">
     <div>
       <button onclick="upClick()" id="temp-up">+</button> 
-      <p>Minimum Temperature: <button id="increase">10</button></p>
+      <p>Minimum Temperature: <button id="increase">20</button></p>
       <button onclick='downClick()' id="temp-down">-</button><br><br>
       <button onclick='resetTemperature()' id="temp-reset">Reset</button>
-      <p>Power saving mode is:=><span id="power-saving-status">ON</span>
-      </p>
-      <button id="powersaving-on">PSM on</button>
-      <button id="powersaving-off">PSM off</button>
+      <p>Manage power saving mode:</p>
+      <button onclick="turnOnPowerSave()" id="powersaving-on">ON</button>
+      <button onclick="turnOffPowerSave()" id="powersaving-off">OFF</button>
     </div>
   </section>  
 
