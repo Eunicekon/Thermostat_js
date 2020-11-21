@@ -4,3 +4,12 @@ body {
 .mainBody {
   text-align: center;
 }
+
+#temp-reset{
+  color: rgb(255, 123, 0);
+}
+
+#temp-down, #temp-up {
+  color: darkgreen;
+  font-weight: bold;
+}
