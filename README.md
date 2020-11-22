@@ -3,7 +3,7 @@ Challenge setup:
 ================
 - Specification:
 
-<img src="image/thermostat.jpeg" height="150" width="150">  <img src="image/tenor.gif" height="150" width="150">
+<img src="image/tenor.gif" height="150" width="150">
 
 TEST
 ====
@@ -18,8 +18,8 @@ TEST
 9. You can ask about the thermostat's current energy usage: < 18 is low-usage, <= 25 is medium-usage, anything else is high-usage.
 10. (In the challenges where we add an interface, low-usage will be indicated with green, medium-usage indicated with black, high-usage indicated with red.)
 
-Thermostat: interface
+Commands
 =====================
-Objectives covered: 
 
-Using HTML/CSS to create a user interface on the web.
+- Run app (express app)=> node app.js
+- Run test using Jest => npm test

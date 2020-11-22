@@ -13,3 +13,15 @@ body {
   color: darkgreen;
   font-weight: bold;
 }
+
+#green-savingPlanet {
+  background-color: forestgreen;
+}
+
+#yellow-savingPlanet {
+  background-color: gold;
+}
+
+#red-savingPlanet {
+  background-color: firebrick;
+}

@@ -10,7 +10,3 @@ app.listen(port, () => {
   console.log(`app listening at http://localhost:${port}`)
 });
 
-
-
-// run => node app.js
-

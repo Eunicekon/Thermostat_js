@@ -3,11 +3,13 @@ let tempDown = document.getElementById("temp-down");
 let tempReset = document.getElementById("temp-reset");
 let powerSaveOn = document.getElementById("powersaving-on");
 let powerSaveOff = document.getElementById("powersaving-off");
-
+let greenButton = document.getElementById("green-savingPlanet");
 
 let defaultTemp = 20;
 let minTemp = 25;
 let maxTemp = 32;
+let yellowButton = 25;
+let redButton = 32;
 
 tempUp.addEventListener('click', function(event){
   tempUp.style.color = "green";
@@ -27,7 +29,7 @@ powerSaveOff.addEventListener('click', function(event){
 
 let increaseTemp = defaultTemp;
 function upClick(){
-  increaseTemp += 1;
+  increaseTemp = defaultTemp += 1;
   document.getElementById("increase").innerHTML = increaseTemp;
 };
 
@@ -54,5 +56,15 @@ function turnOffPowerSave(){
   itsTooHot;
   document.getElementById("increase").innerHTML = itsTooHot;
 };
+
+greenButton.addEventListener('click', function(event){
+  let settingGreenLight = 18;
+  function greenBecauseLow(){
+    if (settingGreenLight <= 24){
+      return "You are still on a low saving mode!";
+      greenButton.style.color = "green";
+    }
+   }
+  });
 
 
